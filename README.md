@@ -5,8 +5,8 @@ This project is a web application that allows users to take notes, register, and
 ## Tech Stack
 
 - **Frontend**: Next.js, React, Tailwind CSS
-- **Backend**: Node.js, Express.js (Assuming, as the backend details are not provided)
-- **Database**: MongoDB (Assuming, as the database details are not provided)
+- **Backend**: Node.js, Nest.js
+- **Database**: MongoDB
 
 ## Getting Started
 
