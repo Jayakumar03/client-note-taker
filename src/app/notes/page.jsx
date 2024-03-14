@@ -3,8 +3,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const NoteForm = () => {
-  const id = localStorage.getItem("userId");
+  const [id, setId] = useState(null);
 
+  useEffect(() => {
+    const userId = localStorage.getItem("userId");
+    setId(userId);
+  }, []);
+  
   const [formData, setFormData] = useState({
     heading: "",
     note: "",
@@ -102,7 +107,7 @@ const NoteForm = () => {
     };
 
     fetch();
-  }, []);
+  }, [id]);
 
   return (
     <div className="min-h-screen bg-gray-100">
