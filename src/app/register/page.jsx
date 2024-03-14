@@ -44,7 +44,21 @@ const Register = () => {
       .post(`http://localhost:4000/user`, formData)
       .then((response) => {
         console.log(response.data);
-        router.push("/");
+        if (response.data.status === 408) {
+          toast.error("Please re-check password and email", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+          });
+        } else {
+          router.push("/");
+        }
       })
       .catch((error) => {
         toast.error("Registration failed. Please try again.", {
