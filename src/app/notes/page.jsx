@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Modal from "../modal/page";
 import axios from "axios";
 
 const NoteForm = () => {
